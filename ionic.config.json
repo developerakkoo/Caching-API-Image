@@ -1,0 +1,7 @@
+{
+  "name": "api-caching",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
