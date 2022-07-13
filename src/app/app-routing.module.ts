@@ -8,8 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'image-home',
     pathMatch: 'full'
+  },
+  {
+    path: 'image-home',
+    loadChildren: () => import('./image-home/image-home.module').then( m => m.ImageHomePageModule)
   },
 ];
 

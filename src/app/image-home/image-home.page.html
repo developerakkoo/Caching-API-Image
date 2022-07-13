@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Image cache Example</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="loadProducts()" expand="block" size="large">
+   Load Products
+  </ion-button>
+
+
+  <ion-card *ngFor="let p of products">
+    <ion-card-header>
+      <app-cached-image [src]="p.imageUrl" >
+
+      </app-cached-image>
+      <!-- <ion-img [src]="p.image" class="ion-padding"></ion-img> -->
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>
+        <p> {{p.title}}</p>
+        <p> {{p.price | currency}} </p>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
